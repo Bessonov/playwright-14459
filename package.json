@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "type": "module",
+  "scripts": {
+    "test": "npx playwright test",
+    "trace": "npx playwright show-trace test-results/example-Routing-should-respect-the-back-button-chromium/trace.zip"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
