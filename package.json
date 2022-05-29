@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "npx playwright test",
+    "start": "docker run -it --rm --ipc=host -v `pwd`:/source -w /source mcr.microsoft.com/playwright:v1.22.0-focal /bin/bash -c 'npm install && npm test'",
+    "test": "npx playwright test -g 'Routing should respect the back button'",
     "trace": "npx playwright show-trace test-results/example-Routing-should-respect-the-back-button-chromium/trace.zip"
   },
   "keywords": [],
